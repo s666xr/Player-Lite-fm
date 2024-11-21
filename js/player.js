@@ -13,7 +13,7 @@ $(document).on(
   function () {
     return pause(),
     $('.pause').html(
-      '<img src="/img/ic/bt/play.svg" alt="Play" title="Play" width="50" height="50">'
+      '<img src="img/ic/bt/play.svg" alt="Play" title="Play" width="50" height="50">'
     ),
     $('.pause').attr('class', 'play'),
     !1
@@ -54,31 +54,31 @@ aud.onerror = function () {
       alert('An unknown error has occurred');
   }
   $('.load').html(
-    '<img src="/img/ic/bt/play.svg" alt="Play" title="Play" width="50" height="50">'
+    '<img src="img/ic/bt/play.svg" alt="Play" title="Play" width="50" height="50">'
   ),
   $('.load').attr('class', 'play')
 },
 aud.onemptied = function () {
   $('.pause').html(
-    '<img src="/img/ic/bt/load.svg" width="50" height="50">'
+    '<img src="img/ic/bt/load.svg" width="50" height="50">'
   ),
   $('.pause').attr('class', 'load')
 },
 aud.oncanplaythrough = function () {
   $('.load').html(
-    '<img src="/img/ic/bt/pause.svg" alt="Pause" title="Pause" width="50" height="50">'
+    '<img src="img/ic/bt/pause.svg" alt="Pause" title="Pause" width="50" height="50">'
   ),
   $('.load').attr('class', 'pause')
 },
 aud.onplaying = function () {
   $('.load').html(
-    '<img src="/img/ic/bt/pause.svg" alt="Pause" title="Pause" width="50" height="50">'
+    '<img src="img/ic/bt/pause.svg" alt="Pause" title="Pause" width="50" height="50">'
   ),
   $('.load').attr('class', 'pause')
 },
 aud.onplay = function () {
   $('.play').html(
-    '<img src="/img/ic/bt/load.svg" width="50" height="50">'
+    '<img src="img/ic/bt/load.svg" width="50" height="50">'
   ),
   $('.play').attr('class', 'load')
 };
@@ -91,7 +91,7 @@ function range(a) {
   aud.muted &&
   (
     aud.muted = !1,
-    $('.img-mute').attr('src', '/img/ic/bt/stereo.svg'),
+    $('.img-mute').attr('src', 'img/ic/bt/stereo.svg'),
     $('.img-mute').attr('class', 'img-stereo')
   )
 }
@@ -100,7 +100,7 @@ $(document).on(
   '.img-stereo',
   function () {
     return aud.muted = !0,
-    $('.img-stereo').attr('src', '/img/ic/bt/mute.svg'),
+    $('.img-stereo').attr('src', 'img/ic/bt/mute.svg'),
     $('.img-stereo').attr('class', 'img-mute'),
     !1
   }
@@ -110,7 +110,7 @@ $(document).on(
   '.img-mute',
   function () {
     return aud.muted = !1,
-    $('.img-mute').attr('src', '/img/ic/bt/stereo.svg'),
+    $('.img-mute').attr('src', 'img/ic/bt/stereo.svg'),
     $('.img-mute').attr('class', 'img-stereo'),
     !1
   }
@@ -124,7 +124,7 @@ function playURL(a) {
 function play() {
   aud.load(),
   $('.play').html(
-    '<img src="/img/ic/bt/load.svg" width="50" height="50">'
+    '<img src="img/ic/bt/load.svg" width="50" height="50">'
   ),
   $('.play').attr('class', 'load'),
   setTimeout(function () {
