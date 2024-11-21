@@ -1,7 +1,7 @@
 
 function imageDef(url, size) {
   return {
-    src: url ?? '/img/fav/apple-icon.png',
+    src: url ?? 'img/fav/apple-icon.png',
     sizes: size,
     type: 'image/png'
   }
@@ -19,7 +19,7 @@ fetch(`https://fsh-api.onrender.com/file?url=https://api.deezer.com/search?q=${e
   .then(res => res.json())
   .then(re => {
     if (!re.data[0]) {
-      document.getElementById('track-cover').src = '/img/fav/apple-icon.png';
+      document.getElementById('track-cover').src = 'img/fav/apple-icon.png';
       if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: title.split(' - ')[1],
@@ -34,7 +34,7 @@ fetch(`https://fsh-api.onrender.com/file?url=https://api.deezer.com/search?q=${e
     document.getElementById('track-title').innerText = res.title;
     document.title = `${res.title_short} | Rádio Gospel - radiosoundfm.com.br`;
     document.getElementById('track-author').innerText = ''+res.artist.name;
-    document.getElementById('track-cover').src = res.album.cover ?? '/img/fav/apple-icon.png';
+    document.getElementById('track-cover').src = res.album.cover ?? 'img/fav/apple-icon.png';
 
     if ('mediaSession' in navigator) {
       navigator.mediaSession.metadata = new MediaMetadata({
